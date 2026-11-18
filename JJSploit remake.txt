@@ -1,0 +1,158 @@
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+local lp = Players.LocalPlayer
+
+local G2L = {}
+
+G2L["ScreenGui_1"] = Instance.new("ScreenGui")
+G2L["ScreenGui_1"]["Name"] = "Screengui"
+G2L["ScreenGui_1"]["ResetOnSpawn"] = false
+G2L["ScreenGui_1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Global
+G2L["ScreenGui_1"]["DisplayOrder"] = 0
+G2L["ScreenGui_1"]["IgnoreGuiInset"] = false
+G2L["ScreenGui_1"]["Enabled"] = true
+G2L["ScreenGui_1"]["ClipToDeviceSafeArea"] = true
+G2L["ScreenGui_1"].Parent = lp:WaitForChild("PlayerGui")
+
+G2L["Frame_2"] = Instance.new("Frame", G2L["ScreenGui_1"])
+G2L["Frame_2"]["Name"] = "Frame1"
+G2L["Frame_2"]["Size"] = UDim2.new(0.45, 0, 0.48, 0)
+G2L["Frame_2"]["Position"] = UDim2.new(0.275, 0, 0.26, 0)
+G2L["Frame_2"]["AnchorPoint"] = Vector2.new(0, 0)
+G2L["Frame_2"]["BackgroundColor3"] = Color3.fromRGB(60, 60, 60)
+G2L["Frame_2"]["BorderSizePixel"] = 0
+G2L["Frame_2"]["Visible"] = true
+G2L["Frame_2"]["ZIndex"] = 1
+G2L["Frame_2"]["Active"] = true
+G2L["Frame_2_Ratio"] = Instance.new("UIAspectRatioConstraint", G2L["Frame_2"])
+G2L["Frame_2_Ratio"]["AspectRatio"] = 2.201
+
+G2L["Frame_Left"] = Instance.new("Frame", G2L["Frame_2"])
+G2L["Frame_Left"]["Name"] = "Frame11"
+G2L["Frame_Left"]["Size"] = UDim2.new(0.025, 0, 1, 0)
+G2L["Frame_Left"]["Position"] = UDim2.new(0, 0, 0, 0)
+G2L["Frame_Left"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0)
+G2L["Frame_Left"]["BorderSizePixel"] = 0
+G2L["Frame_Left"]["ZIndex"] = 2
+
+G2L["Frame_Right"] = Instance.new("Frame", G2L["Frame_2"])
+G2L["Frame_Right"]["Name"] = "Frame11_Copy14"
+G2L["Frame_Right"]["Size"] = UDim2.new(0.025, 0, 1, 0)
+G2L["Frame_Right"]["Position"] = UDim2.new(0.975, 0, 0, 0)
+G2L["Frame_Right"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0)
+G2L["Frame_Right"]["BorderSizePixel"] = 0
+G2L["Frame_Right"]["ZIndex"] = 2
+
+G2L["TextLabel_3"] = Instance.new("TextLabel", G2L["Frame_2"])
+G2L["TextLabel_3"]["Name"] = "TextLabel3"
+G2L["TextLabel_3"]["Size"] = UDim2.new(0.75, 0, 0.12, 0)
+G2L["TextLabel_3"]["Position"] = UDim2.new(0.04, 0, 0.02, 0)
+G2L["TextLabel_3"]["BackgroundTransparency"] = 1
+G2L["TextLabel_3"]["BorderSizePixel"] = 0
+G2L["TextLabel_3"]["ZIndex"] = 2
+G2L["TextLabel_3"]["Text"] = "JJSploit v8.1.0 by angel (remake)"
+G2L["TextLabel_3"]["TextColor3"] = Color3.fromRGB(240, 240, 240)
+G2L["TextLabel_3"]["TextSize"] = 13
+G2L["TextLabel_3"]["Font"] = Enum.Font.Gotham
+G2L["TextLabel_3"]["TextXAlignment"] = Enum.TextXAlignment.Left
+G2L["TextLabel_3"]["TextStrokeColor3"] = Color3.fromRGB(0, 0, 0)
+G2L["TextLabel_3"]["TextStrokeTransparency"] = 0.5
+
+G2L["TextBox_4"] = Instance.new("TextBox", G2L["Frame_2"])
+G2L["TextBox_4"]["Name"] = "TextBox4"
+G2L["TextBox_4"]["Size"] = UDim2.new(0.91, 0, 0.62, 0)
+G2L["TextBox_4"]["Position"] = UDim2.new(0.045, 0, 0.17, 0)
+G2L["TextBox_4"]["BackgroundColor3"] = Color3.fromRGB(47, 47, 47)
+G2L["TextBox_4"]["BorderSizePixel"] = 0
+G2L["TextBox_4"]["ZIndex"] = 2
+G2L["TextBox_4"]["Text"] = ""
+G2L["TextBox_4"]["TextColor3"] = Color3.fromRGB(240, 240, 240)
+G2L["TextBox_4"]["TextSize"] = 13
+G2L["TextBox_4"]["Font"] = Enum.Font.Gotham
+G2L["TextBox_4"]["ClearTextOnFocus"] = false
+G2L["TextBox_4"]["MultiLine"] = true
+G2L["TextBox_4"]["PlaceholderText"] = "print(\"hello world!\")"
+G2L["TextBox_4"]["PlaceholderColor3"] = Color3.fromRGB(128, 128, 128)
+G2L["TextBox_4"]["TextEditable"] = true
+
+G2L["TextButton_5"] = Instance.new("TextButton", G2L["Frame_2"])
+G2L["TextButton_5"]["Name"] = "TextButton5"
+G2L["TextButton_5"]["Size"] = UDim2.new(0.18, 0, 0.13, 0)
+G2L["TextButton_5"]["Position"] = UDim2.new(0.775, 0, 0.83, 0)
+G2L["TextButton_5"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0)
+G2L["TextButton_5"]["BorderSizePixel"] = 0
+G2L["TextButton_5"]["ZIndex"] = 2
+G2L["TextButton_5"]["Text"] = "Correr"
+G2L["TextButton_5"]["TextColor3"] = Color3.fromRGB(240, 240, 240)
+G2L["TextButton_5"]["TextSize"] = 13
+G2L["TextButton_5"]["Font"] = Enum.Font.Gotham
+
+G2L["TextButton_6"] = Instance.new("TextButton", G2L["Frame_2"])
+G2L["TextButton_6"]["Name"] = "TextButton5_Copy9"
+G2L["TextButton_6"]["Size"] = UDim2.new(0.18, 0, 0.13, 0)
+G2L["TextButton_6"]["Position"] = UDim2.new(0.57, 0, 0.83, 0)
+G2L["TextButton_6"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0)
+G2L["TextButton_6"]["BorderSizePixel"] = 0
+G2L["TextButton_6"]["ZIndex"] = 2
+G2L["TextButton_6"]["Text"] = "Clear"
+G2L["TextButton_6"]["TextColor3"] = Color3.fromRGB(240, 240, 240)
+G2L["TextButton_6"]["TextSize"] = 13
+G2L["TextButton_6"]["Font"] = Enum.Font.Gotham
+
+G2L["TextButton_7"] = Instance.new("TextButton", G2L["ScreenGui_1"])
+G2L["TextButton_7"]["Name"] = "OpenButton"
+G2L["TextButton_7"]["Size"] = UDim2.new(0.08, 0, 0.055, 0)
+G2L["TextButton_7"]["Position"] = UDim2.new(0.02, 0, 0.45, 0)
+G2L["TextButton_7"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0)
+G2L["TextButton_7"]["BorderSizePixel"] = 0
+G2L["TextButton_7"]["ZIndex"] = 3
+G2L["TextButton_7"]["Text"] = "open"
+G2L["TextButton_7"]["TextColor3"] = Color3.fromRGB(240, 240, 240)
+G2L["TextButton_7"]["TextSize"] = 13
+G2L["TextButton_7"]["Font"] = Enum.Font.Gotham
+
+local dragging, dragInput, dragStart, startPos
+
+G2L["Frame_2"].InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+		dragging = true
+		dragStart = input.Position
+		startPos = G2L["Frame_2"].Position
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragging = false
+			end
+		end)
+	end
+end)
+
+G2L["Frame_2"].InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+		dragInput = input
+	end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+	if input == dragInput and dragging then
+		local delta = input.Position - dragStart
+		G2L["Frame_2"].Position = UDim2.new(
+			startPos.X.Scale,
+			startPos.X.Offset + delta.X,
+			startPos.Y.Scale,
+			startPos.Y.Offset + delta.Y
+		)
+	end
+end)
+
+G2L["TextButton_6"].MouseButton1Click:Connect(function()
+	G2L["TextBox_4"].Text = ""
+end)
+
+G2L["TextButton_7"].MouseButton1Click:Connect(function()
+	G2L["Frame_2"].Visible = not G2L["Frame_2"].Visible
+end)
+
+G2L["TextButton_5"].MouseButton1Click:Connect(function()
+	local txt = G2L["TextBox_4"].Text
+	print(txt)
+end)
